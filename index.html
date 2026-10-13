@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Git: Muro de Comentarios</title>
+    <style>
+        :root {
+            --github-dark: #24292e;
+            --github-green: #2ea44f;
+            --bg-gray: #f6f8fa;
+            --border-color: #d0d7de;
+            --text-main: #24292e;
+            --text-muted: #57606a;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        header {
+            background-color: var(--github-dark);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--github-green);
+        }
+        header h1 { margin: 0; font-size: 2.2rem; font-weight: 600; }
+        header p { margin: 0.5rem 0 0; opacity: 0.85; font-size: 1.1rem; }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .instructions {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--github-green);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .instructions h2 { margin-top: 0; color: var(--github-dark); font-size: 1.4rem; }
+        .instructions ol { padding-left: 1.2rem; margin-bottom: 0; }
+        .instructions li { margin-bottom: 0.5rem; }
+        code {
+            background: #afb8c133;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 85%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .comment-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .comment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #8c959f;
+        }
+        .student-name {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--github-dark);
+        }
+        .student-comment {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-style: italic;
+            margin: 0 0 1.25rem 0;
+            flex-grow: 1;
+        }
+        .student-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            border-top: 1px solid #f0f1f2;
+            padding-top: 0.75rem;
+        }
+        .github-user {
+            color: #0969da;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .github-user:hover { text-decoration: underline; }
+        .date { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muro de Comentarios del Repositorio</h1>
+        <p>Práctica de Control de Versiones: Deja tu huella en el proyecto</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- INSTRUCCIONES PARA LOS ALUMNOS -->
+        <div class="instructions">
+            <h2>🚀 Instrucciones para dejar tu comentario:</h2>
+            <ol>
+                <li>Haz un <strong>Fork</strong> de este repositorio a tu cuenta de GitHub.</li>
+                <li>Clona tu repositorio fork en tu computadora (o edítalo desde la web de GitHub).</li>
+                <li>Abre este archivo <code>index.html</code> y baja hasta la sección de comentarios.</li>
+                <li>Copia el bloque del <strong>"ESTUDIANTE EJEMPLO"</strong>, pégalo abajo y pon tus datos reales.</li>
+                <li>Haz un <strong>Commit</strong> con el mensaje <code>"Añadido comentario de [Tu Nombre]"</code>.</li>
+                <li>Sube tus cambios (<strong>Push</strong>) y envía un <strong>Pull Request (PR)</strong> al repositorio del profesor.</li>
+            </ol>
+        </div>
+
+        <!-- CONTENEDOR PRINCIPAL DE LOS COMENTARIOS -->
+        <div class="grid">
+
+            <!-- ========================================== -->
+            <!-- EJEMPLO DEL PROFESOR (NO BORRAR)           -->
+            <!-- ========================================== -->
+            <div class="comment-card">
+                <h3 class="student-name">Profesor / Organizador</h3>
+                <p class="student-comment">"Bienvenidos a la práctica. Recuerden que si el Pull Request entra en conflicto, deberemos resolverlo juntos en clase."</p>
+                <div class="student-meta">
+                    <a href="https://github.com" target="_blank" class="github-user">@profe-github</a>
+                    <span class="date">Original</span>
+                </div>
+            </div>
+            <!-- ========================================== -->
+
+
+            <!-- ========================================== -->
+            <!-- COMENTARIOS DE LOS ESTUDIANTES             -->
+            <!-- Pega tu tarjeta justo debajo de esta línea -->
+            <!-- ========================================== -->
+
+            <div class="comment-card">
+                <h3 class="student-name">Estudiante Ejemplo</h3>
+                <p class="student-comment">"¡Mi primer comentario en un repositorio colaborativo! Git es una herramienta excelente para trabajar en equipo."</p>
+                <div class="student-meta">
+                    <a href="https://github.com" target="_blank" class="github-user">@usuario-ejemplo</a>
+                    <span class="date">13/10/2026</span>
+                </div>
+            </div>
+
+            <!-- SIGUIENTE ESTUDIANTE: Copia la estructura de arriba, pégala aquí abajo y edita los datos -->
+
+
+        </div>
+    </div>
+
+</body>
+</html>
